@@ -1,7 +1,10 @@
+package org.orion;
+
 import java.sql.Connection;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Collections;
+import java.util.Enumeration;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
@@ -10,6 +13,8 @@ import java.util.PriorityQueue;
 import java.util.Queue;
 import java.util.Set;
 import java.util.Stack;
+import java.util.Vector;
+import java.util.concurrent.ConcurrentHashMap;
 
 /**
  * @author <a href="http://github.com/DUJF">dujf</a>
@@ -26,6 +31,8 @@ public class ConnectionLearn {
     //删除remove 移除失败返回false
     System.out.println(list.remove("aaaa"));
 
+    Collections.synchronizedCollection(list);
+
     //stack
     Stack<String> stringStack = new Stack<>();
     //添加一个元素 压栈
@@ -38,6 +45,33 @@ public class ConnectionLearn {
     System.out.println(stringStack.pop());
   }
 
+
+  //list 常用实现类 array list  link list
+  private static void victor() {
+    Vector<String> victor = new Vector<>();
+    //添加
+    victor.add("aaa");
+    //删除remove 移除失败返回false
+    System.out.println(victor.remove("aaaa"));
+
+    //stack
+    Stack<String> stringStack = new Stack<>();
+    //添加一个元素 压栈
+    stringStack.push("abnbc");
+
+    Enumeration<String> days = stringStack.elements();
+    while (days.hasMoreElements()) {
+      System.out.println(days.nextElement());
+    }
+
+    //判断是否为空
+    stringStack.empty();
+    //返回栈顶元素
+    stringStack.peek();
+    //取出栈顶元素
+    System.out.println(stringStack.pop());
+
+  }
 
   /**
    * set 常用实现类 hashset 和 treeset
@@ -116,6 +150,7 @@ public class ConnectionLearn {
     } catch (Exception e) {
       System.out.println("add 添加失败");
     }
+    ConcurrentHashMap concurrentHashMap = new ConcurrentHashMap();
   }
 
   //map 常用实现类 hashmap hashtable treemap linkedhashmap
@@ -139,12 +174,13 @@ public class ConnectionLearn {
     map.forEach((String k, String v) -> {
       System.out.println(k + ":" + v);
     });
+
     map.remove("key");
     //清空map
     map.clear();
   }
 
   public static void main(String[] args) {
-    map();
+    victor();
   }
 }
