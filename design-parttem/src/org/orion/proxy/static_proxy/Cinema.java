@@ -7,19 +7,19 @@ package org.orion.proxy.static_proxy;
  */
 public class Cinema implements Movie {
 
-  private Ant2Movie ant2Movie;
+  private Movie movie;
 
   public Cinema() {
   }
 
   public Cinema(Ant2Movie ant2Movie) {
-    this.ant2Movie = ant2Movie;
+    this.movie = ant2Movie;
   }
 
   @Override public void play() {
     food();
     ad();
-    ant2Movie.play();
+    movie.play();
   }
 
   private void ad() {

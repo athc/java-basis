@@ -1,9 +1,5 @@
 package org.orion.proxy.static_proxy;
 
-import org.orion.proxy.dynamic.ChineseBook;
-import org.orion.proxy.dynamic.DynamicAgent;
-import org.orion.proxy.static_proxy.Ant2Movie;
-import org.orion.proxy.static_proxy.Cinema;
 
 /**
  * @author <a href="http://github.com/athc">dujf</a>
