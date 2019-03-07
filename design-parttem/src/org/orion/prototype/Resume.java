@@ -9,6 +9,16 @@ public class Resume implements Cloneable {
   private String name;
   private String email;
 
+  private WorkExperience workExperience;
+
+  public WorkExperience getWorkExperience() {
+    return workExperience;
+  }
+
+  public void setWorkExperience(WorkExperience workExperience) {
+    this.workExperience = workExperience;
+  }
+
   public String getName() {
     return name;
   }
@@ -30,7 +40,7 @@ public class Resume implements Cloneable {
   }
 
   public void show() {
-    System.out.println("name:" + name + " email: " + email);
+    System.out.println("name:" + name + ", email: " + email + ", company :" + workExperience.getCompany() + ", date: " + workExperience.getDate());
   }
 
   @Override protected Object clone() throws CloneNotSupportedException {
