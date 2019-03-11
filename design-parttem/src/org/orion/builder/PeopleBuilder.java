@@ -5,9 +5,19 @@ package org.orion.builder;
  * @date 2018/8/30
  * @since JDK1.8
  */
-public abstract class Builder {
+public abstract class PeopleBuilder {
 
   private People people = new People();
+
+  public abstract void buildHead();
+
+  public abstract void buildArmLeft();
+
+  public abstract void buildArmRight();
+
+  public abstract void buildLegLeft();
+
+  public abstract void buildLegRight();
 
   public abstract void buildClothes();
 

@@ -8,15 +8,18 @@ package org.orion.builder;
  */
 
 class Director {
+  private PeopleBuilder builder;
 
-  private Builder builder;
-
-  //2 set方法注入builder对象
-  public void setBuilder(Builder builder) {
+  public void setBuilder(PeopleBuilder builder) {
     this.builder = builder;
   }
 
   public void construct() {
+    builder.buildHead();
+    builder.buildArmLeft();
+    builder.buildArmRight();
+    builder.buildLegLeft();
+    builder.buildLegRight();
     builder.buildClothes();
     builder.buildPants();
     builder.buildShoes();

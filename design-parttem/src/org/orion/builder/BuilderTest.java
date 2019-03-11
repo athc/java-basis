@@ -8,14 +8,16 @@ package org.orion.builder;
 public class BuilderTest {
 
   public static void main(String[] args) {
+    //指挥者指挥构建
+    Director director = new Director();
 
     ManBuilder manBuilder = new ManBuilder();
-    Director director = new Director();
     director.setBuilder(manBuilder);
     director.construct();
 
+    System.out.println("----------------");
+
     WomanBuilder womanBuilder = new WomanBuilder();
-    director = new Director();
     director.setBuilder(womanBuilder);
     director.construct();
   }
