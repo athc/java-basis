@@ -1,4 +1,4 @@
-package org.orion.factory;
+package org.orion.factory.abstractt;
 
 /**
  * @author <a href="http://github.com/athc">dujf</a>
@@ -19,7 +19,5 @@ public class AbstractFactoryTest {
     gun.shoot();
     bullet = baseFactory.getBullet();
     bullet.load();
-    Long l = 3L;
-    System.out.println(l.equals(3L));
   }
 }
