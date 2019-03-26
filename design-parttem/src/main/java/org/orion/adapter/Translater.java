@@ -5,8 +5,14 @@ package org.orion.adapter;
  * @date 2019-03-26
  * @since JDK1.8
  */
-public class Chinese implements People {
+public class Translater implements People {
+  private People people;
+
+  public Translater(People people) {
+    this.people = people;
+  }
+
   @Override public void speak() {
-    System.out.println("Chinese：你好～");
+    people.speak();
   }
 }

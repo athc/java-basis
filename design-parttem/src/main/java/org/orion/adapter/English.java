@@ -7,6 +7,6 @@ package org.orion.adapter;
  */
 public class English implements People {
   @Override public void speak() {
-    System.out.println("hello");
+    System.out.println("English：hello");
   }
 }
