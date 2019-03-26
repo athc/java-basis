@@ -12,9 +12,10 @@ import java.util.List;
 public class AdapterTest {
 
   public static void main(String[] args) {
-    List list = new ArrayList();
-    for (Iterator it = list.iterator(); it.hasNext(); ) {
-      System.out.println(it.next());
-    }
+    People chinese = new Chinese();
+    chinese.speak();
+
+    People english = new English();
+    english.speak();
   }
 }
