@@ -1,4 +1,4 @@
-package org.orion.factory;
+package org.orion.factory.abstractt;
 
 /**
  * @author <a href="http://github.com/athc">dujf</a>
