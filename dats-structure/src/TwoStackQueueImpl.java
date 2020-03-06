@@ -1,4 +1,5 @@
 import java.util.Stack;
+import sun.jvm.hotspot.utilities.Assert;
 
 /**
  * @author <a href="http://github.com/athc">dujf</a>
@@ -8,30 +9,33 @@ import java.util.Stack;
  */
 public class TwoStackQueueImpl<T> {
 
-  private Stack<T> in = new Stack<>();
-  private Stack<T> out = new Stack<>();
+    private Stack<T> in = new Stack<>();
+    private Stack<T> out = new Stack<>();
 
 
-  private void inputData(T o) {
-    in.push(o);
-  }
-
-  private T getData() {
-    if (out.isEmpty()) {
-      if (!in.isEmpty()) {
-        in.forEach(data -> out.push(data));
-      }
+    private void inputData(T o) {
+        in.push(o);
     }
-    return !out.isEmpty() ? out.pop() : null;
-  }
 
-  public static void main(String[] args) {
-    TwoStackQueueImpl<String> queue = new TwoStackQueueImpl<>();
-    queue.inputData("name");
-    queue.inputData("is");
-    queue.inputData("zhangsna");
-    System.out.println(queue.getData());
-    System.out.println(queue.getData());
-    System.out.println(queue.getData());
-  }
+    private T getData() {
+        if (out.isEmpty()) {
+            if (!in.isEmpty()) {
+                in.forEach(data -> out.push(data));
+            }
+        }
+        return !out.isEmpty() ? out.pop() : null;
+    }
+
+    public static void main(String[] args) {
+        TwoStackQueueImpl<String> queue = new TwoStackQueueImpl<>();
+        queue.inputData("name");
+        queue.inputData("is");
+        queue.inputData("zhangsna");
+        System.out.println(queue.getData());
+        queue.inputData("1234");
+        System.out.println(queue.getData());
+        queue.inputData("234");
+        queue.inputData("456765");
+        System.out.println(queue.getData());
+    }
 }
