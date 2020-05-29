@@ -6,6 +6,7 @@
 
     <groupId>org.orion</groupId>
     <artifactId>java-basis</artifactId>
+    <packaging>pom</packaging>
     <version>1.0-SNAPSHOT</version>
 
     <modules>
@@ -13,5 +14,6 @@
         <module>threading</module>
         <module>junit-orion</module>
         <module>design-parttem</module>
+        <module>file</module>
     </modules>
 </project>
