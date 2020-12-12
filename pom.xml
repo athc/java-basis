@@ -13,7 +13,7 @@
         <module>java8</module>
         <module>threading</module>
         <module>junit-orion</module>
-        <module>design-parttem</module>
+        <module>design-partten</module>
         <module>file</module>
     </modules>
 </project>
