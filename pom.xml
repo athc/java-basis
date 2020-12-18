@@ -15,6 +15,13 @@
         <module>junit-orion</module>
         <module>design-partten</module>
         <module>file</module>
+        <module>file</module>
+        <module>think-in-java</module>
+        <module>socket-learn</module>
+        <module>final-key</module>
+        <module>data-structure</module>
+        <module>collections</module>
+        <module>algorithm</module>
     </modules>
     <properties>
         <maven.compiler.source>11</maven.compiler.source>
@@ -26,7 +33,6 @@
             <groupId>org.junit.jupiter</groupId>
             <artifactId>junit-jupiter</artifactId>
             <version>5.6.2</version>
-            <scope>test</scope>
         </dependency>
     </dependencies>
 </project>

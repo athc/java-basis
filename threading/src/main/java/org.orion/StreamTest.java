@@ -1,7 +1,7 @@
 package org.orion;
 
-import org.junit.Assert;
-import org.junit.Test;
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -28,6 +28,6 @@ public class StreamTest {
             });
         }
         jobs.parallelStream().forEach(Runnable::run);
-        Assert.assertEquals(100, count.get());
+        Assertions.assertEquals(100, count.get());
     }
 }

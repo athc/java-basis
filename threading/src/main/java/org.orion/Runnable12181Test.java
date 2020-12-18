@@ -1,8 +1,8 @@
 package org.orion;
 
 
-import org.junit.Assert;
-import org.junit.Test;
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Test;
 
 import java.util.concurrent.ConcurrentSkipListSet;
 
@@ -23,7 +23,7 @@ public class Runnable12181Test {
             thread.start();
         }
         Thread.sleep(1000);
-        Assert.assertEquals(100, values.stream().distinct().count());
+        Assertions.assertEquals(100, values.stream().distinct().count());
     }
 
     static class ThreadLocalDemo implements Runnable {
