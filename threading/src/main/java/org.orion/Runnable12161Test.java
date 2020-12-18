@@ -6,7 +6,7 @@ package org.orion;
  * @date 2019-03-11
  * @since JDK1.8
  */
-public class RunnableTest12161 {
+public class Runnable12161Test {
 
     /**
      * 静态方法 通过实体类调用 编译没问题

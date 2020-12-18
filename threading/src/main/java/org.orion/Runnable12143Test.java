@@ -9,7 +9,7 @@ import java.util.concurrent.locks.ReentrantLock;
  * @date 2019-03-11
  * @since JDK1.8
  */
-public class RunnableTest12143 {
+public class Runnable12143Test {
 
     private static Phone phone;
 

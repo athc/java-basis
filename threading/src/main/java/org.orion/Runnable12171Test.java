@@ -10,7 +10,7 @@ import java.util.concurrent.ConcurrentLinkedQueue;
  * @date 2019-03-11
  * @since JDK1.8
  */
-public class RunnableTest12171 {
+public class Runnable12171Test {
 
 
     @Test

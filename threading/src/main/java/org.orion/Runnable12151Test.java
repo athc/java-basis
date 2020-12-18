@@ -8,7 +8,7 @@ import org.junit.Test;
  * @date 2019-03-11
  * @since JDK1.8
  */
-public class RunnableTest12151 {
+public class Runnable12151Test {
 
 
     @Test

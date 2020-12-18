@@ -5,7 +5,7 @@ package org.orion;
  * @date 2019-03-11
  * @since JDK1.8
  */
-public class RunnableTest1213 {
+public class Runnable1213Test {
     private static int count = 0;
 
     public static void main(String[] args) throws InterruptedException {
