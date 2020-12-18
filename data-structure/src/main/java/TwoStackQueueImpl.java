@@ -1,5 +1,4 @@
 import java.util.Stack;
-import sun.jvm.hotspot.utilities.Assert;
 
 /**
  * @author <a href="http://github.com/athc">dujf</a>
