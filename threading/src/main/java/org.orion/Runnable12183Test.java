@@ -26,8 +26,10 @@ public class Runnable12183Test {
             Thread.sleep(1000L);
             return Thread.currentThread().getId();
         };
-        Object res = Executors.newSingleThreadExecutor().submit(callable).get();
-        System.out.println("res:" + res);
+        Future res = Executors.newSingleThreadExecutor().submit(callable);
+        if (res.isDone()) {
+            System.out.println("res:" + res);
+        }
         System.out.println("当前线程：" + Thread.currentThread().getName() + ":ID:" + Thread.currentThread().getId());
     }
 
@@ -47,8 +49,12 @@ public class Runnable12183Test {
         FutureTask<Object> futureTask = new FutureTask<>(callable);
 //        Thread thread = new Thread(futureTask);
 //        thread.start();
-        Executors.newSingleThreadExecutor().submit(futureTask);
-        System.out.println("res:" + futureTask.get());
+        Future future = Executors.newSingleThreadExecutor().submit(futureTask);
+        if (future.isDone()) {
+            System.out.println("res:" + futureTask.get());
+        }
         System.out.println("当前线程：" + Thread.currentThread().getName() + ":ID:" + Thread.currentThread().getId());
+
+        Runtime.getRuntime().addShutdownHook(new Thread(() -> System.out.println("当前线程：" + Thread.currentThread().getName() + ":ID:" + Thread.currentThread().getId() + "结束才执行 ")));
     }
 }
